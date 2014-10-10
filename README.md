@@ -9,7 +9,6 @@ This repository could be useful for create and configure a Web Server Apache wit
 4.	Execute the terminal of your computer; **c:\User\Administrator>**
 5.	Navigate into folder created at step 3;  **c:\User\Administrator>cd c:\vagrant**
 6.	Execute command *vagrant init*; **c:\vagrant>vagrant init**
-
 7.	Now copy and replace the content of repository extracted *Step 2* into folder *c:\vagrant*
 
 ### Configuration Web Server ###
