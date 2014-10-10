@@ -1,12 +1,17 @@
-# README #
+# WEB SERVER WITH VAGRANT MACHINE #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This repository could be useful for create and configure a Web Server Apache with an Vagrant Machine.
 
-### What is this repository for? ###
+### Installation Step by Step ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+1. Get and install Vagrant for your OS [Download](https://www.vagrantup.com/downloads.html);
+2. Create a folder where you want to install the virtual machine (es. c:\vagrant);
+3. Execute the terminal of your computer;
+	a> sdshd
+	a> sdshd
+	a> sdshd
+4. Navigate in to folder created at sep 2 "c:\vagrant"
+
 
 ### How do I get set up? ###
 
@@ -27,3 +32,9 @@ This README would normally document whatever steps are necessary to get your app
 
 * Repo owner or admin
 * Other community or team contact
+
+```
+#!terminal
+
+qqweqwewe
+```
