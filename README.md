@@ -12,7 +12,7 @@ This repository could be useful for create and configure a Web Server Apache wit
 7.	Now copy and replace the content of repository extracted *Step 2* into folder *c:\vagrant*
 
 ### Configuration Web Server ###
-1.	Edit file /vgr-config/Homestead.yaml, insert password for mysql (line 22,23) and path of folder of your customized VirtualHosts (line 31);
+1.	Edit file **/vgr-config/Homestead.yaml** insert password for mysql (line 22,23) and path of folder of your customized VirtualHosts (line 31);
 2.	You may also **paying attention** customize other features with editing **homestead.rb** and **Vagrantfile** but **Attention**.
 
 ### Usage Vagrant ###
