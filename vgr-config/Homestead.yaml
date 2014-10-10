@@ -1,0 +1,33 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+command:
+    # config proxy
+    - /bin/echo "http_proxy=http://212.45.98.66:8080" >> /etc/environment
+    - /bin/echo "https_proxy=http://212.45.98.66:8080" >> /etc/environment
+    - /bin/echo "no_proxy=localhost,127.0.0.1" >> /etc/environment
+    - /bin/echo "Acquire::http::Proxy \"http://212.45.98.66:8080\";" >> /etc/apt/apt.conf.d/70debconf
+    - /bin/echo "Acquire::https::Proxy \"http://212.45.98.66:8080\";" >> /etc/apt/apt.conf.d/70debconf
+
+    # Install package for web server
+    - apt-get update
+    - apt-get install vim --yes
+    - apt-get install curl --yes
+    - apt-get install -y apache2
+    - apt-get install -y openssl
+
+    # Install and configure mysql, change YOURPASSWORD with your password
+    - sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password YOURPASSWORD'
+    - sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password YOURPASSWORD'
+    - apt-get install -y mysql-server
+
+    - apt-get install -y php5 php5-gd php5-curl php5-mysql
+    - apt-get install -y git
+    - /etc/init.d/apache2 restart
+
+    # Copy all your virtual host in /etc/apache2/sites-enabled/, change DIRECTORY with name of project folder
+    - cp -r /DIRECTORY/vgr-vhost/* /etc/apache2/sites-enabled/
+    - rm /etc/apache2/sites-enabled/000-default
+    - /etc/init.d/apache2 restart
