@@ -27,7 +27,7 @@ command:
     - apt-get install -y git
     - /etc/init.d/apache2 restart
 
-    # Copy all your virtual host in /etc/apache2/sites-enabled/, change DIRECTORY with name of project folder
+    # Copy all your virtual host in /etc/apache2/sites-enabled/, change DIRECTORY with name of VM folder
     - cp -r /DIRECTORY/vgr-vhost/* /etc/apache2/sites-enabled/
     - rm /etc/apache2/sites-enabled/000-default
     - /etc/init.d/apache2 restart
