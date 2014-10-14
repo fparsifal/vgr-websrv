@@ -5,7 +5,7 @@
     ServerName www.my-domain.com
 
     # Change DIRECTORY with name of project folder
-    DocumentRoot /DIRECTORY/www/PROJECTNAME
+    DocumentRoot /vagrant/www/PROJECTNAME
 
     <Directory />
         Options FollowSymLinks
@@ -13,7 +13,7 @@
     </Directory>
 
     # Change DIRECTORY with name of project folder
-    <Directory /DIRECTORY/www/PROJECTNAME/>
+    <Directory /vagrant/www/PROJECTNAME/>
         Options Indexes FollowSymLinks MultiViews
         AllowOverride None
         Order allow,deny
